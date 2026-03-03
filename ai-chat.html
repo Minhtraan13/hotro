@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">AI Chat – Trợ lý học tập</header>
+
+  <main class="chat-wrap">
+    <section id="chatMessages" class="card chat-box">
+      <div class="msg ai">Xin chào! Mình là trợ lý AI học tập. Bạn muốn ôn chủ đề nào hôm nay?</div>
+    </section>
+
+    <section class="card chat-controls">
+      <label for="mode">Chế độ AI</label>
+      <select id="mode">
+        <option value="teacher">Gia sư</option>
+        <option value="exam">Luyện thi</option>
+        <option value="quick">Trả lời nhanh</option>
+      </select>
+
+      <label for="chatInput">Câu hỏi</label>
+      <input id="chatInput" placeholder="Ví dụ: giải thích đạo hàm là gì" onkeydown="if(event.key==='Enter'){sendMessage()}">
+      <button onclick="sendMessage()">Gửi</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

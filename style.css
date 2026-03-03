@@ -37,7 +37,7 @@ body{
   backdrop-filter: blur(10px);
 }
 .glass{
-  width:380px;
+  width:420px;
   text-align:center;
 }
 h1,h3{margin-top:0}
@@ -64,4 +64,38 @@ button,.btn{
   padding:6px 12px;
   border-radius:999px;
   font-size:12px;
+}
+.chat-wrap {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  padding: 40px;
+}
+.chat-box {
+  min-height: 60vh;
+  max-height: 70vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.msg {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  line-height: 1.5;
+}
+.msg.ai {
+  background: rgba(124, 58, 237, 0.25);
+  align-self: flex-start;
+}
+.msg.user {
+  background: rgba(59, 130, 246, 0.35);
+  align-self: flex-end;
+}
+@media (max-width: 900px) {
+  .container,
+  .chat-wrap {
+    grid-template-columns: 1fr;
+  }
 }
